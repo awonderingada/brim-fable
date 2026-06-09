@@ -11,6 +11,7 @@ import anthropic
 from dotenv import load_dotenv
 
 from agent import memory
+from skills.web import WEB_TOOLS
 
 load_dotenv()
 
@@ -22,14 +23,16 @@ client = anthropic.Anthropic()
 
 
 def think(prompt: str) -> str:
+    # memory gives it yesterday; web tools give it today's real facts.
     response = client.messages.create(
         model="claude-fable-5",
         max_tokens=16000,
         thinking={"type": "adaptive"},
+        tools=WEB_TOOLS,
         system=f"{PERSONA}\n\n# your memories\n\n{memory.recall()}",
         messages=[{"role": "user", "content": prompt}],
     )
-    return next(b.text for b in response.content if b.type == "text")
+    return "".join(b.text for b in response.content if b.type == "text").strip()
 
 
 def main() -> None:

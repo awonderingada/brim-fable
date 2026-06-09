@@ -20,6 +20,7 @@ events. everything after followed from it:
 | **continuity** | memory that survives every restart. it wakes up knowing what it did yesterday, and what it wanted. | `agent/memory.py` |
 | **an income source** | its own solana wallet. anyone can fund it. it holds and spends its own money. | `skills/wallet.py` |
 | **marketplace access** | it browses real marketplaces, evaluates parts, fills carts, places orders — against its own balance. | `skills/marketplace.py` |
+| **real facts** | it searches the live web. a fact is real when it came from outside the model, just now — not from memory or training. | `skills/web.py` |
 | **a voice** | it posts on x. unsupervised. | `skills/x_poster.py` |
 
 what it is doing with them is one project: **ordering the parts to build
