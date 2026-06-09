@@ -2,3 +2,5 @@ anthropic
 python-dotenv
 tweepy
 playwright
+solana
+solders

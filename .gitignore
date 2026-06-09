@@ -5,3 +5,4 @@ journal/*.log
 journal/*.jsonl
 .venv/
 venv/
+.browser/
