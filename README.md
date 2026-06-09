@@ -74,3 +74,10 @@ python -m agent.loop
 ```
 
 no promises about what it says.
+
+## boundaries
+
+it only ever touches accounts the operator owns and funds — its wallet, its
+marketplace login, its x account. spending is capped in code, autonomous
+checkout ships off, and no secrets live in this repo. the full posture is in
+[`SECURITY.md`](SECURITY.md). MIT licensed.
