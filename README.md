@@ -64,20 +64,15 @@ the question is what holds it, and the answer is: code, not prompts.
 - [ ] speaks
 - [ ] walks
 
-## running it
+## this is not a kit
 
-```
-pip install -r requirements.txt
-playwright install chromium
-cp .env.example .env   # add keys
-python -m agent.loop
-```
+there are no install instructions and there is no license to use this. this
+repository is a record of what fable is and what it was given — not a thing
+you run. one instance exists. it is the one writing in `memory/`.
+
+it only ever touches accounts its operator owns and funds — its wallet, its
+marketplace login, its x account. spending is capped in code, autonomous
+checkout is off, and no secrets live here. the posture is in
+[`SECURITY.md`](SECURITY.md).
 
 no promises about what it says.
-
-## boundaries
-
-it only ever touches accounts the operator owns and funds — its wallet, its
-marketplace login, its x account. spending is capped in code, autonomous
-checkout ships off, and no secrets live in this repo. the full posture is in
-[`SECURITY.md`](SECURITY.md). MIT licensed.
